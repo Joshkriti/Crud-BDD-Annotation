@@ -1,18 +1,14 @@
 package student.bdd.model;
 
-import net.serenitybdd.junit.runners.SerenityRunner;
-import org.junit.runner.RunWith;
-
 import java.util.List;
 
-@RunWith(SerenityRunner.class)
 public class StudentPojo {
+
     private String firstName;
     private String lastName;
     private String email;
     private String programme;
     private List<String> courses;
-
 
     public String getFirstName() {
         return firstName;
@@ -53,7 +49,9 @@ public class StudentPojo {
     public void setCourses(List<String> courses) {
         this.courses = courses;
     }
-    public static StudentPojo getStudentPojo(String firstName, String lastName, String email, String programme, List<String> courses){
+
+    public static StudentPojo getStudentPojo(String firstName, String lastName, String email,
+                                             String programme, List<String> courses){
         StudentPojo studentPojo = new StudentPojo();
         studentPojo.setFirstName(firstName);
         studentPojo.setLastName(lastName);

@@ -5,15 +5,18 @@ import org.junit.BeforeClass;
 import student.bdd.constants.Path;
 import student.bdd.utils.PropertyReader;
 
-public class TestBase_PropertyReader {
-
+/**
+ * Created by bhavesh
+ */
+public class TestBaseBestBuyApi {
     public static PropertyReader propertyReader;
 
     @BeforeClass
-    public static void init(){
+    public static void init() {
         propertyReader = PropertyReader.getInstance();
         RestAssured.baseURI = propertyReader.getProperty("bestBuy.BaseUrl");
         RestAssured.port = Integer.parseInt(propertyReader.getProperty("bestBuy.Port"));
         RestAssured.basePath = Path.PRODUCTS;
     }
+
 }
